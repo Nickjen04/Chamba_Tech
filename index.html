@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamba Tech | Tecnología Rentable para MYPES</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --azul-oscuro: #0a2540;
+            --cian: #00d4ff;
+            --blanco: #ffffff;
+            --gris-claro: #f6f9fc;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            color: var(--azul-oscuro);
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--blanco);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(10, 37, 64, 0.8), rgba(10, 37, 64, 0.8)), 
+                        url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80');
+            background-size: cover;
+            color: var(--blanco);
+            padding: 100px 5%;
+            text-align: center;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; }
+
+        .btn-principal {
+            background: var(--cian);
+            color: var(--azul-oscuro);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .servicios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 80px 5%;
+            background: var(--gris-claro);
+            text-align: center;
+        }
+
+        .card {
+            background: var(--blanco);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .card img { width: 80px; margin-bottom: 20px; }
+
+        .contacto {
+            padding: 80px 5%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background: var(--azul-oscuro);
+            color: var(--blanco);
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div style="font-weight: bold; font-size: 1.5rem;">CHAMBA TECH</div>
+        <nav>
+            <a href="#contacto" style="text-decoration: none; color: var(--azul-oscuro);">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <p>Infraestructura digital que escala con tu negocio</p>
+        <h1>Tecnología Rentable</h1>
+        <a href="#contacto" class="btn-principal">Diagnóstico Gratis</a>
+    </section>
+
+    <section class="servicios">
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2092/2092663.png" alt="Continuidad">
+            <h3>Continuidad Operativa</h3>
+            <p>Sistemas anti-caídas para que nunca dejes de vender.</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png" alt="Automatización">
+            <h3>Automatización de Procesos</h3>
+            <p>Elimina tareas manuales y reduce costos operativos.</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/1243/1243560.png" alt="Escalabilidad">
+            <h3>Infraestructura Escalable</h3>
+            <p>Sistemas preparados para el crecimiento de tu MYPE.</p>
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <h2 style="text-align: center;">Hablemos</h2>
+        <p style="text-align: center;">¿Tu sistema es una bomba de tiempo? Solicita tu diagnóstico gratuito hoy.</p>
+        <form action="https://formspree.io/f/TU_ID_AQUÍ" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="email" name="_replyto" placeholder="Correo Electrónico" required>
+            <input type="text" name="telefono" placeholder="Número de Teléfono">
+            <textarea name="mensaje" rows="4" placeholder="Cuéntanos tu problema técnico"></textarea>
+            <button type="submit">Quiero mi diagnóstico gratis</button>
+        </form>
+    </section>
+
+</body>
+</html>
